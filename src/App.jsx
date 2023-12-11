@@ -1,9 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Container from "./components/layout/Container";
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <nav style={{ display: "flex", gap: "15px" }}>
+        <Link to="/">Home</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/company">Company</Link>
+        <Link to="/newproject">NewProject</Link>
+      </nav>
+      <Container />
+      <h1>Goodbye</h1>
     </>
   );
 }
