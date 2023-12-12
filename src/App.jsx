@@ -10,7 +10,7 @@ function App() {
         <Link to="/company">Company</Link>
         <Link to="/newproject">NewProject</Link>
       </nav>
-      <Container />
+      <Container custonClass="min-height" />
       <h1>Goodbye</h1>
     </>
   );
