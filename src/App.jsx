@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
 import Container from "./components/layout/Container/Container";
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
 
 function App() {
   return (
     <>
-      <nav style={{ display: "flex", gap: "15px" }}>
-        <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/company">Company</Link>
-        <Link to="/newproject">NewProject</Link>
-      </nav>
+      <Header custonClass="" />
       <Container custonClass="min-height" />
-      <h1>Goodbye</h1>
+      <Footer custonClass="" />
     </>
   );
 }
