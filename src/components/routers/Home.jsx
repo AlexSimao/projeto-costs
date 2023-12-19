@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
-import savings from "../../assets/savings.svg"
+import savings from "../../assets/savings.svg";
+import LinkButton from "../layout/LinkButton/LinkButton";
 
 function Home() {
   return (
@@ -7,9 +8,15 @@ function Home() {
       <h1>
         Bem-Vindo ao <span>Costs</span>
       </h1>
-      <p>Comece a gerenciar os seus projetos agota mesmo!</p>
-      <a href="/">Criar Projeto</a>
-      <img src={savings} alt="Imagem Savings" />
+      <p>Comece a gerenciar os seus projetos agora mesmo!</p>
+      <LinkButton
+        to="./newproject"
+        text={"Criar Projeto"}
+      />
+      <img
+        src={savings}
+        alt="Imagem Savings"
+      />
     </section>
   );
 }
