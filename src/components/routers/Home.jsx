@@ -3,13 +3,13 @@ import savings from "../../assets/savings.svg"
 
 function Home() {
   return (
-    <section>
+    <section className={styles.home_container}>
       <h1>
         Bem-Vindo ao <span>Costs</span>
       </h1>
       <p>Comece a gerenciar os seus projetos agota mesmo!</p>
       <a href="/">Criar Projeto</a>
-      <img src={savings} alt="" />
+      <img src={savings} alt="Imagem Savings" />
     </section>
   );
 }

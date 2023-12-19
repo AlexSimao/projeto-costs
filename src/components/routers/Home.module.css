@@ -1,0 +1,44 @@
+.home_container {
+  width: 100%;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_container {
+  h1 {
+    font-size: 2em;
+    margin-bottom: .5em;
+
+    span {
+      color: #ffbb33;
+      background-color: #222;
+      padding: 0 0.2em;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5em;
+    color: #7b7b7b;
+  }
+
+  img {
+    width: 320px;
+    margin: 2em 0;
+  }
+}
+
+@media (min-width: 500px) {
+  .home_container {
+    h1 {
+      font-size: 2.5em;
+    }
+
+    img {
+      width: 400px;
+    }
+  }
+}
