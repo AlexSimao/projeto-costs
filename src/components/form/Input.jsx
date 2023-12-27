@@ -1,17 +1,23 @@
 import styles from "./Input.module.css";
 import PropTypes from "prop-types";
 
-function Input({ type, placeholder }) {
+function Input({ type, text, name, placeholder, handleOnChange, value }) {
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-    />
+    <div>
+      <label htmlFor={name}>{text}</label>
+      <input
+        value={value}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+      />
+    </div>
   );
 }
 
-Input.prototypes = {
+Input.propTypes = {
   type: PropTypes.string,
+  text: PropTypes.string,
   placeholder: PropTypes.string,
 };
 
