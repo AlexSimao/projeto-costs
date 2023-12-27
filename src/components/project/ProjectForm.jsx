@@ -1,6 +1,8 @@
+import styles from "./ProjectForm.module.css"
+
 function ProjectForm() {
   return (
-    <form method="post">
+    <form className={styles.form}>
       <div>
         <input
           type="text"
