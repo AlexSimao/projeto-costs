@@ -1,4 +1,5 @@
 import Input from "../form/Input";
+import Select from "../form/Select";
 import styles from "./ProjectForm.module.css";
 
 function ProjectForm() {
@@ -10,14 +11,15 @@ function ProjectForm() {
         placeholder="Insira o orçamento total"
       />
 
-      <div>
-        <select
-          name="category_id"
-          id="category_id"
-        >
-          <option disabled>Selecione uma categoria</option>
-        </select>
-      </div>
+      <Select
+        id="category_id"
+        optionsArray={[
+          {
+            text: "Selecione uma categoria",
+            disabled: true,
+          },
+        ]}
+      />
 
       <Input
         type="submit"
