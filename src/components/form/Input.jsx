@@ -1,14 +1,14 @@
 import styles from "./Input.module.css";
 import PropTypes from "prop-types";
 
-function Input({ type, text, name, placeholder, handleOnChange, value }) {
+function Input({ type, text, id, placeholder, handleOnChange, value }) {
   return (
     <div className={styles.form_control}>
-      <label htmlFor={name}>{text}</label>
+      <label htmlFor={id}>{text}</label>
       <input
         type={type}
-        name={name}
-        id={name}
+        name={id}
+        id={id}
         placeholder={placeholder}
         onChange={handleOnChange}
         value={value}
@@ -18,6 +18,7 @@ function Input({ type, text, name, placeholder, handleOnChange, value }) {
 }
 
 Input.propTypes = {
+  id: PropTypes.any.isRequired,
   type: PropTypes.string,
   text: PropTypes.string,
   placeholder: PropTypes.string,
