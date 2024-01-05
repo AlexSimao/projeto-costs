@@ -1,8 +1,9 @@
 import Input from "../form/Input";
 import Select from "../form/Select";
+import SubmitButton from "../form/SubmitButton";
 import styles from "./ProjectForm.module.css";
 
-function ProjectForm() {
+function ProjectForm({btnText}) {
   return (
     <form className={styles.form}>
       <Input
@@ -28,10 +29,9 @@ function ProjectForm() {
         ]}
       />
 
-      <Input
+      <SubmitButton
         id="btn_submit"
-        type="submit"
-        value="Criar Projeto"
+        text={btnText}
       />
     </form>
   );

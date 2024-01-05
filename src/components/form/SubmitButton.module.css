@@ -1,0 +1,21 @@
+.form_control {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1em 0;
+
+  .btn {
+    padding: .5em;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 1em;
+
+    transition: .5s;
+  }
+
+  .btn:hover {
+    color: #ffbb33;
+    background-color: black;
+  }
+
+}
