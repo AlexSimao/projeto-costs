@@ -1,17 +1,16 @@
 import styles from "./Select.module.css";
 
-function Select({ id, optionsArray }) {
+function Select({ id, optionsArray, value }) {
   return (
     <select
       name={id}
       id={id}
-      defaultValue={0}
+      defaultValue={value}
     >
       {optionsArray.map(
         (item, index) =>
           true && (
             <option
-              selected={item.selected}
               disabled={item.disabled}
               value={index}
               key={index}

@@ -12,6 +12,7 @@ function ProjectForm() {
       />
 
       <Select
+        value={0}
         id="category_id"
         optionsArray={[
           {
