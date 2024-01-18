@@ -1,0 +1,21 @@
+{
+  "projects": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra1"
+    },
+    {
+      "id": 2,
+      "name": "Infra2"
+    },
+    {
+      "id": 3,
+      "name": "Infra3"
+    },
+    {
+      "id": 4,
+      "name": "Infra4"
+    }
+  ]
+}
