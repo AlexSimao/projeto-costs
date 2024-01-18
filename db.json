@@ -2,20 +2,25 @@
   "projects": [],
   "categories": [
     {
+      "id": 0,
+      "name": "Selecione uma categoria",
+      "disabled": true
+    },
+    {
       "id": 1,
-      "name": "Infra1"
+      "name": "Infra"
     },
     {
       "id": 2,
-      "name": "Infra2"
+      "name": "Desenvolvimento"
     },
     {
       "id": 3,
-      "name": "Infra3"
+      "name": "Design"
     },
     {
       "id": 4,
-      "name": "Infra4"
+      "name": "Planejamento"
     }
   ]
 }

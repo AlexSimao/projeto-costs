@@ -1,7 +1,7 @@
 import styles from "./Select.module.css";
 import PropTypes from "prop-types";
 
-function Select({ id, text, optionsArray, handleOnChange, value }) {
+function Select({ id, text, options, handleOnChange, value }) {
   return (
     <div className={styles.form_control}>
       <label htmlFor={id}>{text}</label>
@@ -10,13 +10,13 @@ function Select({ id, text, optionsArray, handleOnChange, value }) {
         id={id}
         defaultValue={value}
       >
-        {optionsArray.map((item, index) => (
+        {options.map((option, index) => (
           <option
-            disabled={item.disabled}
-            value={index}
-            key={index}
+            disabled={option.disabled}
+            value={option.id}
+            key={option.id}
           >
-            {item.text}
+            {option.name}
           </option>
         ))}
       </select>
@@ -28,7 +28,7 @@ Select.propTypes = {
   id: PropTypes.any.isRequired,
   type: PropTypes.string,
   text: PropTypes.string,
-  placeholder: PropTypes.string,
+  options: PropTypes.array,
 };
 
 Select.defaultProps = {
