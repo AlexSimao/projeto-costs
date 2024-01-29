@@ -1,14 +1,18 @@
+import { useState } from "react";
 import styles from "./Select.module.css";
 import PropTypes from "prop-types";
 
 function Select({ id, text, options, handleOnChange, value }) {
+  const [valor, setValor] = useState(value);
+
   return (
     <div className={styles.form_control}>
       <label htmlFor={id}>{text}</label>
       <select
         name={id}
         id={id}
-        defaultValue={value}
+        onChange={(e) => setValor(e.target.value)}
+        value={valor}
       >
         {options.map((option, index) => (
           <option
