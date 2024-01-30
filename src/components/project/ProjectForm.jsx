@@ -5,8 +5,10 @@ import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 import styles from "./ProjectForm.module.css";
 
-function ProjectForm({ btnText }) {
+function ProjectForm({ btnText, handleSubmit, projectData }) {
   const [categories, setCategories] = useState([]);
+
+  const [project, setProject] = useState(projectData || {})
 
   useEffect(() => {
     fetch("http://localhost:5000/categories", {
@@ -22,8 +24,13 @@ function ProjectForm({ btnText }) {
       .catch((err) => console.log(err));
   }, []);
 
+  const submit = e => {
+    e.preventDefault()
+    handleSubmit(project)
+  } 
+
   return (
-    <form className={styles.form}>
+    <form onSubmit={submit} className={styles.form}>
       <Input
         id="nome_projeto"
         text="Nome do Projeto"
