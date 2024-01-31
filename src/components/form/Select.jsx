@@ -5,13 +5,18 @@ import PropTypes from "prop-types";
 function Select({ id, text, options, handleOnChange, value }) {
   const [valor, setValor] = useState(value);
 
+  function renderizarOnChange(e) {
+    handleOnChange(e);
+    setValor(e.target.value);
+  }
+
   return (
     <div className={styles.form_control}>
       <label htmlFor={id}>{text}</label>
       <select
         name={id}
         id={id}
-        onChange={(e) => setValor(e.target.value)}
+        onChange={renderizarOnChange}
         value={valor}
       >
         {options.map((option, index) => (
